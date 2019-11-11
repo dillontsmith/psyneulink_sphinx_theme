@@ -7,12 +7,12 @@ window.mobileTOC = {
 
       if ($parent.hasClass("is-open")) {
         $parent.removeClass("is-open");
-        $(".pytorch-left-menu").slideUp(200, function() {
+        $(".psyneulink-left-menu").slideUp(200, function() {
           $(this).css({display: ""});
         });
       } else {
         $parent.addClass("is-open");
-        $(".pytorch-left-menu").slideDown(200);
+        $(".psyneulink-left-menu").slideDown(200);
       }
     });
   }

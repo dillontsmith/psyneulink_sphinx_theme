@@ -73,19 +73,19 @@ function ThemeNav () {
         var doc = $(document),
             self = this;
 
-        this.navBar = $('div.pytorch-side-scroll:first');
+        this.navBar = $('div.psyneulink-side-scroll:first');
         this.win = $(window);
 
         // Set up javascript UX bits
         $(document)
             // Shift nav in mobile when clicking the menu.
-            .on('click', "[data-toggle='pytorch-left-menu-nav-top']", function() {
+            .on('click', "[data-toggle='psyneulink-left-menu-nav-top']", function() {
                 $("[data-toggle='wy-nav-shift']").toggleClass("shift");
                 $("[data-toggle='rst-versions']").toggleClass("shift");
             })
 
             // Nav menu link click operations
-            .on('click', ".pytorch-menu-vertical .current ul li a", function() {
+            .on('click', ".psyneulink-menu-vertical .current ul li a", function() {
                 var target = $(this);
                 // Close menu when you click a link.
                 $("[data-toggle='wy-nav-shift']").removeClass("shift");
@@ -110,7 +110,7 @@ function ThemeNav () {
             .wrap("<div class='wy-table-responsive citation'></div>");
 
         // Add expand links to all parents of nested ul
-        $('.pytorch-menu-vertical ul').not('.simple').siblings('a').each(function () {
+        $('.psyneulink-menu-vertical ul').not('.simple').siblings('a').each(function () {
             var link = $(this);
                 expand = $('<span class="toctree-expand"></span>');
             expand.on('click', function (ev) {
@@ -127,7 +127,7 @@ function ThemeNav () {
         var anchor = encodeURI(window.location.hash) || '#';
 
         try {
-            var vmenu = $('.pytorch-menu-vertical');
+            var vmenu = $('.psyneulink-menu-vertical');
             var link = vmenu.find('[href="' + anchor + '"]');
             if (link.length === 0) {
                 // this link was not found in the sidebar.
@@ -144,7 +144,7 @@ function ThemeNav () {
             // If we found a matching link then reset current and re-apply
             // otherwise retain the existing match
             if (link.length > 0) {
-                $('.pytorch-menu-vertical .current').removeClass('current');
+                $('.psyneulink-menu-vertical .current').removeClass('current');
                 link.addClass('current');
                 link.closest('li.toctree-l1').addClass('current');
                 link.closest('li.toctree-l1').parent().addClass('current');
@@ -250,14 +250,14 @@ if (downloadNote.length >= 1) {
     var tutorialUrlArray = $("#tutorial-type").text().split('/');
         tutorialUrlArray[0] = tutorialUrlArray[0] + "_source"
 
-    var githubLink = "https://github.com/pytorch/tutorials/blob/master/" + tutorialUrlArray.join("/") + ".py",
+    var githubLink = "https://github.com/psyneulink/tutorials/blob/master/" + tutorialUrlArray.join("/") + ".py",
         notebookLink = $(".reference.download")[1].href,
         notebookDownloadPath = notebookLink.split('_downloads')[1].split('/').pop(),
-        colabLink = "https://colab.research.google.com/github/pytorch/tutorials/blob/gh-pages/_downloads/" + notebookDownloadPath;
+        colabLink = "https://colab.research.google.com/github/psyneulink/tutorials/blob/gh-pages/_downloads/" + notebookDownloadPath;
 
     $("#google-colab-link").wrap("<a href=" + colabLink + " data-behavior='call-to-action-event' data-response='Run in Google Colab' target='_blank'/>");
     $("#download-notebook-link").wrap("<a href=" + notebookLink + " data-behavior='call-to-action-event' data-response='Download Notebook'/>");
     $("#github-view-link").wrap("<a href=" + githubLink + " data-behavior='call-to-action-event' data-response='View on Github' target='_blank'/>");
 } else {
-    $(".pytorch-call-to-action-links").hide();
+    $(".psyneulink-call-to-action-links").hide();
 }

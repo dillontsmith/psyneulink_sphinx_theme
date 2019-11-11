@@ -1,20 +1,20 @@
 from setuptools import setup
 from io import open
-from pytorch_sphinx_theme import __version__
+from psyneulink_sphinx_theme import __version__
 
 setup(
-    name = 'pytorch_sphinx_theme',
+    name = 'psyneulink_sphinx_theme',
     version =__version__,
     author = 'Shift Lab',
     author_email= 'info@shiftlabny.com',
-    url="https://github.com/pytorch/pytorch_sphinx_theme",
-    docs_url="https://github.com/pytorch/pytorch_sphinx_theme",
-    description='PyTorch Sphinx Theme',
-    py_modules = ['pytorch_sphinx_theme'],
-    packages = ['pytorch_sphinx_theme'],
+    url="https://github.com/psyneulink/psyneulink_sphinx_theme",
+    docs_url="https://github.com/psyneulink/psyneulink_sphinx_theme",
+    description='PsyNeuLink Sphinx Theme',
+    py_modules = ['psyneulink_sphinx_theme'],
+    packages = ['psyneulink_sphinx_theme'],
     include_package_data=True,
     zip_safe=False,
-    package_data={'pytorch_sphinx_theme': [
+    package_data={'psyneulink_sphinx_theme': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
@@ -25,7 +25,7 @@ setup(
     ]},
     entry_points = {
         'sphinx.html_themes': [
-            'pytorch_sphinx_theme = pytorch_sphinx_theme',
+            'psyneulink_sphinx_theme = psyneulink_sphinx_theme',
         ]
     },
     license= 'MIT License',

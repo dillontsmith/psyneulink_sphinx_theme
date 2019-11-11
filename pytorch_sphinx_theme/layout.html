@@ -102,7 +102,7 @@
 </div>
 
 
-<body class="pytorch-body">
+<body class="psyneulink-body">
 
   {% block extrabody %} {% endblock %}
 
@@ -113,10 +113,10 @@
       <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
     </div>
 
-    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
-      <div class="pytorch-side-scroll">
-        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          <div class="pytorch-left-menu-search">
+    <nav data-toggle="wy-nav-shift" class="psyneulink-left-menu" id="psyneulink-left-menu">
+      <div class="psyneulink-side-scroll">
+        <div class="psyneulink-menu psyneulink-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="psyneulink-left-menu-search">
             {% block sidebartitle %}
 
             {% if theme_display_version %}
@@ -158,37 +158,37 @@
       </div>
     </nav>
 
-    <div class="pytorch-container">
-      <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
-        <div class="pytorch-breadcrumbs-wrapper">
+    <div class="psyneulink-container">
+      <div class="psyneulink-page-level-bar" id="psyneulink-page-level-bar">
+        <div class="psyneulink-breadcrumbs-wrapper">
           {% include "breadcrumbs.html" %}
         </div>
 
-        <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+        <div class="psyneulink-shortcuts-wrapper" id="psyneulink-shortcuts-wrapper">
           Shortcuts
         </div>
       </div>
 
-      <section data-toggle="wy-nav-shift" id="pytorch-content-wrap" class="pytorch-content-wrap">
-        <div class="pytorch-content-left">
+      <section data-toggle="wy-nav-shift" id="psyneulink-content-wrap" class="psyneulink-content-wrap">
+        <div class="psyneulink-content-left">
 
-        {% if theme_pytorch_project == 'tutorials' %}
+        {% if theme_psyneulink_project == 'tutorials' %}
 
-          <div class="pytorch-call-to-action-links">
+          <div class="psyneulink-call-to-action-links">
             <div id="tutorial-type">{{ pagename }}</div>
 
             <div id="google-colab-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/pytorch-colab.svg', 1) }}"/>
+              <img class="call-to-action-img" src="{{ pathto('_static/images/psyneulink-colab.svg', 1) }}"/>
               <div class="call-to-action-desktop-view">Run in Google Colab</div>
               <div class="call-to-action-mobile-view">Colab</div>
             </div>
             <div id="download-notebook-link">
-              <img class="call-to-action-notebook-img" src="{{ pathto('_static/images/pytorch-download.svg', 1) }}"/>
+              <img class="call-to-action-notebook-img" src="{{ pathto('_static/images/psyneulink-download.svg', 1) }}"/>
               <div class="call-to-action-desktop-view">Download Notebook</div>
               <div class="call-to-action-mobile-view">Notebook</div>
             </div>
             <div id="github-view-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/pytorch-github.svg', 1) }}"/>
+              <img class="call-to-action-img" src="{{ pathto('_static/images/psyneulink-github.svg', 1) }}"/>
               <div class="call-to-action-desktop-view">View on GitHub</div>
               <div class="call-to-action-mobile-view">GitHub</div>
             </div>
@@ -204,7 +204,7 @@
           {% endif %}
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
             {%- block document %}
-             <article itemprop="articleBody" id="pytorch-article" class="pytorch-article">
+             <article itemprop="articleBody" id="psyneulink-article" class="psyneulink-article">
               {% block body %}{% endblock %}
              </article>
              {% if self.comments()|trim %}
@@ -219,9 +219,9 @@
         {%- endblock %}
         </div>
 
-        <div class="pytorch-content-right" id="pytorch-content-right">
-          <div class="pytorch-right-menu" id="pytorch-right-menu">
-            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+        <div class="psyneulink-content-right" id="psyneulink-content-right">
+          <div class="psyneulink-right-menu" id="psyneulink-right-menu">
+            <div class="psyneulink-side-scroll" id="psyneulink-side-scroll-right">
               {{ toc }}
             </div>
           </div>
@@ -289,7 +289,7 @@
     <div class="container-fluid">
       <div class="container mobile-logo-container">
         <div class="mobile-main-menu-header-container">
-          <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="PyTorch"></a>
+          <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="PsyNeuLink"></a>
           <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
         </div>
       </div>
@@ -315,18 +315,18 @@
           </li>
 
           <li>
-            <a href="{{ theme_variables.external_urls['hub'] }}">PyTorch Hub</a>
+            <a href="{{ theme_variables.external_urls['hub'] }}">PsyNeuLink Hub</a>
           </li>
 
           <li>
             <a href="{{ theme_variables.external_urls['blog'] }}">Blog</a>
           </li>
 
-          <li {%- if theme_pytorch_project == 'tutorials' %} class="active"{%- endif %}>
+          <li {%- if theme_psyneulink_project == 'tutorials' %} class="active"{%- endif %}>
             <a href="{{ theme_variables.external_urls['tutorials'] }}">Tutorials</a>
           </li>
 
-          <li {%- if theme_pytorch_project == 'docs' %} class="active"{%- endif %}>
+          <li {%- if theme_psyneulink_project == 'docs' %} class="active"{%- endif %}>
             <a href="{{ theme_variables.external_urls['docs'] }}">Docs</a>
           </li>
 
@@ -350,14 +350,14 @@
     $(document).ready(function() {
       mobileMenu.bind();
       mobileTOC.bind();
-      pytorchAnchors.bind();
+      psyneulinkAnchors.bind();
       sideMenus.bind();
       scrollToAnchor.bind();
       highlightNavigation.bind();
       mainMenuDropdown.bind();
 
       // Add class to links that have code blocks, since we cannot create links in code blocks
-      $("article.pytorch-article a span.pre").each(function(e) {
+      $("article.psyneulink-article a span.pre").each(function(e) {
         $(this).closest("a").addClass("has-code");
       });
     })

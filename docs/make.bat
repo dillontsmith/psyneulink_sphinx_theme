@@ -11,7 +11,7 @@ set SPHINXOPTS=
 set SPHINXBUILD=sphinx-build
 set SOURCEDIR=.
 set BUILDDIR=build
-set SPHINXPROJ=PyTorchSphinxTheme
+set SPHINXPROJ=PsyNeuLinkSphinxTheme
 
 if "%1" == "" goto help
 

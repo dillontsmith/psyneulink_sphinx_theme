@@ -86,11 +86,11 @@ window.utilities = {
   },
 
   headersHeight: function() {
-    if (document.getElementById("pytorch-left-menu").classList.contains("make-fixed")) {
-      return document.getElementById("pytorch-page-level-bar").offsetHeight;
+    if (document.getElementById("psyneulink-left-menu").classList.contains("make-fixed")) {
+      return document.getElementById("psyneulink-page-level-bar").offsetHeight;
     } else {
       return document.getElementById("header-holder").offsetHeight +
-             document.getElementById("pytorch-page-level-bar").offsetHeight;
+             document.getElementById("psyneulink-page-level-bar").offsetHeight;
     }
   },
 

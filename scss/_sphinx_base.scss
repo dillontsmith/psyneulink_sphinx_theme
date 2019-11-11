@@ -75,7 +75,7 @@ p {
   color: $red_orange;
 }
 
-ul.pytorch-breadcrumbs {
+ul.psyneulink-breadcrumbs {
   padding-left: 0;
   list-style-type: none;
 
@@ -215,7 +215,7 @@ a:visited {
   }
 }
 
-article.pytorch-article {
+article.psyneulink-article {
   ul,
   ol {
     padding-left: rem(30px);
@@ -251,11 +251,11 @@ article.pytorch-article {
   }
 }
 
-article.pytorch-article .section:first-of-type h1:first-of-type {
+article.psyneulink-article .section:first-of-type h1:first-of-type {
   margin-top: 0;
 }
 
-article.pytorch-article .sphx-glr-thumbcontainer {
+article.psyneulink-article .sphx-glr-thumbcontainer {
   margin: 0;
   border: 1px solid #d6d7d8 ;
   border-radius: 0;
@@ -332,7 +332,7 @@ article.pytorch-article .sphx-glr-thumbcontainer {
   }
 }
 
-article.pytorch-article {
+article.psyneulink-article {
   .section {
     :not(dt) > code {
       color: $not_quite_black;
@@ -511,7 +511,7 @@ article.pytorch-article {
 // defined above for entire sections, e.g, .function and .class.  So this is
 // placed later in this file, for higher precedence when both rules have same
 // specificities.
-article.pytorch-article {
+article.psyneulink-article {
   .note,
   .warning,
   .tip,
@@ -627,7 +627,7 @@ article.pytorch-article {
   }
 }
 
-.pytorch-article {
+.psyneulink-article {
   div.sphx-glr-download a {
     background-color: $light_grey;
     background-image: url("../images/arrow-down-orange.svg");
@@ -673,11 +673,11 @@ article.pytorch-article {
   }
 }
 
-.pytorch-article p.sphx-glr-script-out {
+.psyneulink-article p.sphx-glr-script-out {
   margin-bottom: rem(18px);
 }
 
-.pytorch-article div.sphx-glr-script-out {
+.psyneulink-article div.sphx-glr-script-out {
   margin-bottom: rem(40px);
   .highlight {
     margin-left: 0;
@@ -695,7 +695,7 @@ article.pytorch-article {
   }
 }
 
-article.pytorch-article {
+article.psyneulink-article {
   .wy-table-responsive {
     table {
       border: none;
@@ -761,20 +761,20 @@ img.previous-page {
   }
 }
 
-article.pytorch-article {
+article.psyneulink-article {
   blockquote {
     margin-left: rem(60px);
     color: $quick_start_grey;
   }
 }
 
-article.pytorch-article .caption {
+article.psyneulink-article .caption {
   color: $quick_start_grey;
   letter-spacing: 0.25px;
   line-height: rem(34px);
 }
 
-article.pytorch-article {
+article.psyneulink-article {
   .math {
     color: $not_quite_black;
     width: auto;
@@ -785,7 +785,7 @@ article.pytorch-article {
   }
 }
 
-.pytorch-breadcrumbs-wrapper {
+.psyneulink-breadcrumbs-wrapper {
   width: 100%;
 
   @include sphinx-medium-size {
@@ -799,12 +799,12 @@ article.pytorch-article {
     margin-left: rem(30px);
   }
 
-  .pytorch-breadcrumbs-aside {
+  .psyneulink-breadcrumbs-aside {
     float: right;
   }
 }
 
-.pytorch-article .container {
+.psyneulink-article .container {
   padding-left: 0;
   padding-right: 0;
   max-width: none;
@@ -883,7 +883,7 @@ a:hover {
   padding-bottom: rem(16px);
 }
 
-.pytorch-call-to-action-links {
+.psyneulink-call-to-action-links {
   padding-top: 0;
   display: flex;
 

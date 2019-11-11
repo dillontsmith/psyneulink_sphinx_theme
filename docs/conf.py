@@ -133,12 +133,12 @@ todo_include_todos = False
 #
 
 import sys
-sys.path.append('/Users/ds70/Downloads/pytorch_sphinx_theme')
+sys.path.append('/Users/ds70/Downloads/psyneulink_sphinx_theme')
 
-import pytorch_sphinx_theme
-html_theme = "pytorch_sphinx_theme"
+import psyneulink_sphinx_theme
+html_theme = "psyneulink_sphinx_theme"
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['/Users/ds70/Downloads/pytorch_sphinx_theme']
+html_theme_path = ['/Users/ds70/Downloads/psyneulink_sphinx_theme']
 html_theme_options = {
     'navigation_depth': 5
 }

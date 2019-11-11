@@ -1,6 +1,6 @@
-# PyTorch Sphinx Theme
+# PsyNeuLink Sphinx Theme
 
-Sphinx theme for [PyTorch Docs](https://pytorch.org/docs/master/torch.html) and [PyTorch Tutorials](https://pytorch.org/tutorials) based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest).
+Sphinx theme for [PsyNeuLink Docs](https://psyneulink.org/docs/master/torch.html) and [PsyNeuLink Tutorials](https://psyneulink.org/tutorials) based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest).
 
 ## Local Development
 
@@ -67,11 +67,11 @@ The resulting site is a demo.
 
 ## Testing your changes and submitting a PR
 
-When you are ready to submit a PR with your changes you can first test that your changes have been applied correctly against either the PyTorch Docs or Tutorials repo:
+When you are ready to submit a PR with your changes you can first test that your changes have been applied correctly against either the PsyNeuLink Docs or Tutorials repo:
 
 1. Run the `grunt build` task on your branch and commit the build to Github.
-2. In your local docs or tutorials repo, remove any existing `pytorch_sphinx_theme` packages in the `src` folder (there should be a `pip-delete-this-directory.txt` file there)
-3. In `requirements.txt` replace the existing git link with a link pointing to your commit or branch, e.g. `-e git+git://github.com/{ your repo }/pytorch_sphinx_theme.git@{ your commit hash }#egg=pytorch_sphinx_theme`
+2. In your local docs or tutorials repo, remove any existing `psyneulink_sphinx_theme` packages in the `src` folder (there should be a `pip-delete-this-directory.txt` file there)
+3. In `requirements.txt` replace the existing git link with a link pointing to your commit or branch, e.g. `-e git+git://github.com/{ your repo }/psyneulink_sphinx_theme.git@{ your commit hash }#egg=psyneulink_sphinx_theme`
 4. Install the requirements `pip install -r requirements.txt`
 5. Remove the current build. In the docs this is `make clean`, tutorials is `make clean-cache`
 6. Build the static site. In the docs this is `make html`, tutorials is `make html-noplot`
@@ -89,12 +89,12 @@ grunt build
 
 Once that is successful commit the change to Github.
 
-### Developing locally against PyTorch Docs and Tutorials
+### Developing locally against PsyNeuLink Docs and Tutorials
 
-To be able to modify and preview the theme locally against the PyTorch Docs and/or the PyTorch Tutorials first clone the repositories:
+To be able to modify and preview the theme locally against the PsyNeuLink Docs and/or the PsyNeuLink Tutorials first clone the repositories:
 
-- [PyTorch (Docs)](https://github.com/pytorch/pytorch)
-- [PyTorch Tutorials](https://github.com/pytorch/tutorials)
+- [PsyNeuLink (Docs)](https://github.com/psyneulink/psyneulink)
+- [PsyNeuLink Tutorials](https://github.com/psyneulink/tutorials)
 
 Then follow the instructions in each repository to make the docs.
 
@@ -116,11 +116,11 @@ make html
 
 Once these are successful, navigate to the `conf.py` file in each project. In the Docs these are at `./docs/source`. The Tutorials one can be found in the root directory.
 
-In `conf.py` change the html theme to `pytorch_sphinx_theme` and point the html theme path to this repo's local folder, which will end up looking something like:
+In `conf.py` change the html theme to `psyneulink_sphinx_theme` and point the html theme path to this repo's local folder, which will end up looking something like:
 
 ```
-html_theme = 'pytorch_sphinx_theme'
-html_theme_path = ["../../../pytorch_sphinx_theme"]
+html_theme = 'psyneulink_sphinx_theme'
+html_theme_path = ["../../../psyneulink_sphinx_theme"]
 ```
 
 Next create a file `.env.json` in the root of this repo with some keys/values referencing the local folders of the Docs and Tutorials repos:
@@ -128,7 +128,7 @@ Next create a file `.env.json` in the root of this repo with some keys/values re
 ```
 {
   "TUTORIALS_DIR": "../tutorials",
-  "DOCS_DIR": "../pytorch/docs/source"
+  "DOCS_DIR": "../psyneulink/docs/source"
 }
 
 ```
@@ -160,7 +160,7 @@ There are a couple of stylesheets and fonts inside the Docs and Tutorials repos 
 html_context = {
     # 'css_files': [
     #     'https://fonts.googleapis.com/css?family=Lato',
-    #     '_static/css/pytorch_theme.css'
+    #     '_static/css/psyneulink_theme.css'
     # ],
 }
 ```
@@ -170,7 +170,7 @@ html_context = {
 ```
 # ./conf.py
 
-# app.add_stylesheet('css/pytorch_theme.css')
+# app.add_stylesheet('css/psyneulink_theme.css')
 # app.add_stylesheet('https://fonts.googleapis.com/css?family=Lato')
 ```
 
@@ -181,7 +181,7 @@ The top navigation and mobile menu expect an "active" state for one of the menu 
 ```
 html_theme_options = {
   ...
-  'pytorch_project': {project}
+  'psyneulink_project': {project}
   ...
 }
 ```

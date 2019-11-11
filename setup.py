@@ -5,8 +5,8 @@ from psyneulink_sphinx_theme import __version__
 setup(
     name = 'psyneulink_sphinx_theme',
     version =__version__,
-    author = 'Shift Lab',
-    author_email= 'info@shiftlabny.com',
+    author = 'Dillon Smith',
+    author_email= 'dillon.th.smith@gmail.com',
     url="https://github.com/psyneulink/psyneulink_sphinx_theme",
     docs_url="https://github.com/psyneulink/psyneulink_sphinx_theme",
     description='PsyNeuLink Sphinx Theme',

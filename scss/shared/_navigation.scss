@@ -31,21 +31,21 @@
 }
 
 .header-logo {
-  height: 23px;
-  width: 93px;
-  background-image: url("../images/logo.svg");
+  height: 55px;
+  width: 68px;
+  background-image: url("../images/PsyNeuLink_logo_dark.svg");
   background-repeat: no-repeat;
-  background-size: 93px 23px;
+  background-size: 68px 55px;
   display: block;
   float: left;
   z-index: 10;
 
   @include full-nav-menu-desktop {
-    background-size: 108px 27px;
+    background-size: 71px 57px;
     position: absolute;
-    height: 27px;
-    width: 108px;
-    top: 4px;
+    height: 57px;
+    width: 71px;
+    top: -10px;
     float: none;
   }
 }
@@ -59,7 +59,7 @@
   height: 17px;
   position: absolute;
   right: 0;
-  top: 4px;
+  top: 18px;
   @include full-nav-menu-desktop {
     display: none;
   }
@@ -177,7 +177,7 @@
   position: absolute;
   right: 0;
   width: 24px;
-  top: -4px;
+  top: 10px;
 }
 
 .mobile-main-menu-header-container {

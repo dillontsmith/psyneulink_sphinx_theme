@@ -8242,6 +8242,7 @@ h3 {
 
 .highlight-default {
   overflow-x: auto;
+  margin-bottom: 1.125rem;
 }
 
 .highlight pre {

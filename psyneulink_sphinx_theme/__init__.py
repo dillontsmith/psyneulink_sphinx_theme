@@ -5,7 +5,7 @@ From https://github.com/shiftlab/psyneulink_sphinx_theme.
 """
 from os import path
 
-__version__ = '1.1.1.0'
+__version__ = '1.1.2.0'
 __version_full__ = __version__
 
 

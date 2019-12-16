@@ -10616,6 +10616,14 @@ a:hover {
 }
 
 .psyneulink-left-menu li.toctree-l1 ul,
+.psyneulink-left-menu li.toctree-l2 ul,
+.psyneulink-left-menu li.toctree-l3 ul,
+.psyneulink-left-menu li.toctree-l4 ul,
+.psyneulink-left-menu li.toctree-l5 ul{
+  display: none;
+}
+
+.psyneulink-left-menu li.toctree-l1 ul,
 .psyneulink-left-menu li.toctree-l2 ul {
   position: relative;
   left: 15px;
@@ -10625,7 +10633,11 @@ a:hover {
 .psyneulink-right-menu li.toctree-l1.current > a {
   color: #ee4c2c;
 }
-.psyneulink-left-menu .current > a:before,
+.psyneulink-left-menu li.toctree-l1.current > a:before,
+.psyneulink-left-menu li.toctree-l2.current > a:before,
+.psyneulink-left-menu li.toctree-l3.current > a:before,
+.psyneulink-left-menu li.toctree-l4.current > a:before,
+.psyneulink-left-menu li.toctree-l5.current > a:before,
 .psyneulink-right-menu li.toctree-l1.current > a:before {
   content: "•";
   display: inline-block;
@@ -10641,7 +10653,7 @@ a:hover {
 /*    left: -20px;*/
 /*  }*/
 /*}*/
-.psyneulink-left-menu li.toctree-l1.current li.toctree-l2 > ul, .psyneulink-left-menu li.toctree-l2.current li.toctree-l3 > ul,
+.psyneulink-left-menu li.toctree-l1.current li.toctree-l2.current > ul, .psyneulink-left-menu li.toctree-l2.current li.toctree-l3.current > ul,
 .psyneulink-right-menu li.toctree-l1.current li.toctree-l2 > ul,
 .psyneulink-right-menu li.toctree-l2.current li.toctree-l3 > ul {
   display: block;
@@ -10651,19 +10663,19 @@ a:hover {
 .psyneulink-right-menu li.toctree-l2.current li.toctree-l3.current > ul {
   display: block;
 }
-.psyneulink-left-menu li.toctree-l2.current li.toctree-l3 > a,
+.psyneulink-left-menu li.toctree-l2.current li.toctree-l3.current > a,
 .psyneulink-right-menu li.toctree-l2.current li.toctree-l3 > a {
   display: block;
 }
-.psyneulink-left-menu li.toctree-l3,
+.psyneulink-left-menu li.toctree-l3.current,
 .psyneulink-right-menu li.toctree-l3 {
   font-size: 0.9em;
 }
-.psyneulink-left-menu li.toctree-l3.current li.toctree-l4 > a,
+.psyneulink-left-menu li.toctree-l3.current li.toctree-l4.current > a,
 .psyneulink-right-menu li.toctree-l3.current li.toctree-l4 > a {
   display: block;
 }
-.psyneulink-left-menu li.toctree-l4,
+.psyneulink-left-menu li.toctree-l4.current,
 .psyneulink-right-menu li.toctree-l4 {
   font-size: 0.9em;
 }
@@ -10710,12 +10722,18 @@ a:hover {
   color: #6c6c6d;
 }
 
+.psyneulink-right-menu a.reference.internal.expanded,
+.psyneulink-right-menu a.reference.internal.not-expanded {
+  pointer-events: auto
+}
+
 .psyneulink-left-menu a.reference.internal.expanded:before,
 .psyneulink-right-menu a.reference.internal.expanded:before {
   content: "-";
   font-family: monospace;
   position: absolute;
   left: -12px;
+  pointer-events: auto;
 }
 
 .psyneulink-left-menu a.reference.internal.not-expanded:before,
@@ -10724,6 +10742,7 @@ a:hover {
   font-family: monospace;
   position: absolute;
   left: -12px;
+  pointer-events: auto;
 }
 
 .psyneulink-right-menu li.active > a {

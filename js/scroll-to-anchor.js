@@ -53,7 +53,6 @@ window.scrollToAnchor = {
 
         if(match) {
           var anchorOffset = $(match).offset().top - this.getFixedOffset();
-
           $('html, body').scrollTop(anchorOffset);
 
           // Add the state to history as-per normal anchor links
@@ -87,6 +86,10 @@ window.scrollToAnchor = {
        */
       delegateAnchors: function(e) {
         var elem = e.target;
+
+        if (elem.tagName.toLowerCase() === 'em'){
+          elem = elem.offsetParent
+        }
 
         if(this.scrollIfAnchor(elem.getAttribute('href'), true)) {
           e.preventDefault();

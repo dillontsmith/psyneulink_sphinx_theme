@@ -120,6 +120,14 @@ function ThemeNav () {
             });
             link.prepend(expand);
         });
+
+        // Replace "Parameters" in class references with "Arguments"
+        var sphinxSections = document.querySelectorAll('dl.py.class dl.field-list.simple dt.field-odd')
+        sphinxSections.forEach((i) => {
+            if (i.textContent === 'Parameters') {
+                i.textContent = 'Arguments'
+            }
+        })
     };
 
     nav.reset = function () {

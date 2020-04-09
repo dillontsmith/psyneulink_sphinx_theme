@@ -132,6 +132,21 @@ function ThemeNav () {
                 i.textContent = 'Arguments:'
             }
         })
+
+        // Adjust spans for each section in TOC for scrolling that's consistent with side menu
+
+        var tocSections = document.querySelectorAll('#psyneulink-article #contents a.reference.internal')
+
+        tocSections.forEach(
+            (section) => {
+                let utilities = window.utilities;
+                let href = section.getAttribute('href')
+                let span = document.querySelector(`span${href}`)
+                span.style.display = 'block';
+                span.style.position = 'relative';
+                span.style.bottom = `${utilities.OFFSET_HEIGHT_PADDING + utilities.headersHeight()}px`
+            }
+        )
     };
 
     nav.reset = function () {

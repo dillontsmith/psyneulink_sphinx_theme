@@ -12,9 +12,7 @@ window.scrollToAnchor = {
     var anchorScrolls = {
       ANCHOR_REGEX: /^#[^ ]+$/,
       offsetHeightPx: function() {
-        var OFFSET_HEIGHT_PADDING = 20;
-        // TODO: this is a little janky. We should try to not rely on JS for this
-        return utilities.headersHeight() + OFFSET_HEIGHT_PADDING;
+        return utilities.headersHeight() + utilities.OFFSET_HEIGHT_PADDING;
       },
 
       /**

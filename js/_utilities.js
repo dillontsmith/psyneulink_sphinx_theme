@@ -1,4 +1,6 @@
 window.utilities = {
+  OFFSET_HEIGHT_PADDING: 20,
+
   scrollTop: function() {
     var supportPageOffset = window.pageXOffset !== undefined;
     var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
@@ -86,12 +88,7 @@ window.utilities = {
   },
 
   headersHeight: function() {
-    if (document.getElementById("psyneulink-left-menu").classList.contains("make-fixed")) {
-      return document.getElementById("psyneulink-page-level-bar").offsetHeight;
-    } else {
-      return document.getElementById("header-holder").offsetHeight +
-             document.getElementById("psyneulink-page-level-bar").offsetHeight;
-    }
+    return document.getElementById("psyneulink-page-level-bar").offsetHeight
   },
 
   windowHeight: function() {

@@ -48,9 +48,9 @@ window.scrollToAnchor = {
         }
 
         match = document.getElementById(href.slice(1));
-
         if(match) {
           var anchorOffset = $(match).offset().top - this.getFixedOffset();
+          console.log($(match).offset().top, this.getFixedOffset())
           $('html, body').scrollTop(anchorOffset);
 
           // Add the state to history as-per normal anchor links
@@ -84,11 +84,12 @@ window.scrollToAnchor = {
        */
       delegateAnchors: function(e) {
         var elem = e.target;
-
         if (elem.tagName.toLowerCase() === 'em'){
           elem = elem.offsetParent
         }
-
+        else if (elem.tagName.toLowerCase() === 'span'){
+          elem = elem.parentNode
+        }
         if(this.scrollIfAnchor(elem.getAttribute('href'), true)) {
           e.preventDefault();
         }

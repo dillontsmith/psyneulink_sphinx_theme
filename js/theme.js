@@ -147,6 +147,18 @@ function ThemeNav () {
                 span.style.bottom = `${utilities.OFFSET_HEIGHT_PADDING + utilities.headersHeight()}px`
             }
         )
+
+        var nonTocNavSections = document.querySelectorAll('.psyneulink-article .section')
+
+        nonTocNavSections.forEach(
+            (section) => {
+                let span = section.querySelector('span')
+                if (span && span.textContent === ''){
+                    span.style.display = 'block';
+                    span.style.position = 'relative';
+                }
+            }
+        )
     };
 
     nav.reset = function () {

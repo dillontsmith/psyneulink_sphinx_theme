@@ -144,7 +144,6 @@ function ThemeNav () {
                 let span = document.querySelector(`span${href}`)
                 span.style.display = 'block';
                 span.style.position = 'relative';
-                span.style.bottom = `${utilities.OFFSET_HEIGHT_PADDING + utilities.headersHeight()}px`
             }
         )
 

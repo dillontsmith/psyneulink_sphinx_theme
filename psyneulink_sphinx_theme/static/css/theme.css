@@ -11169,7 +11169,7 @@ article.psyneulink-article ul {
   position: relative;
   width: 60px;
   height: 17px;
-  top: 5px;
+  top: 3px;
 }
 
 /* Hide default HTML checkbox */
@@ -11229,4 +11229,9 @@ input:checked + .slider:before {
 
 .technical-note {
   display: none;
+}
+
+.switch-txt {
+  font-size: 0.875rem;
+  color: #6c6c6d;
 }

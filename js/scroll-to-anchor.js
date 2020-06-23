@@ -49,8 +49,10 @@ window.scrollToAnchor = {
 
         match = document.getElementById(href.slice(1));
         if(match) {
+          if (match.querySelector('.dev-mode-link')){
+            $(document.querySelector('.switch-ctrl input')).prop('checked', true).trigger('change')
+          };
           var anchorOffset = $(match).offset().top - this.getFixedOffset();
-          console.log($(match).offset().top, this.getFixedOffset())
           $('html, body').scrollTop(anchorOffset);
 
           // Add the state to history as-per normal anchor links

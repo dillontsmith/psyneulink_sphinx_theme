@@ -3,8 +3,8 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   var envJSON = grunt.file.readJSON(".env.json");
-  var PROJECT_DIR = "docs/";
-
+  // var PROJECT_DIR = "docs/";
+  console.log('PROJECT OPTION', grunt.option('project'))
   switch (grunt.option('project')) {
     case "docs":
       PROJECT_DIR = envJSON.DOCS_DIR;

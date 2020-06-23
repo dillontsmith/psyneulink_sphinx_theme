@@ -167,6 +167,14 @@
   }
 }
 
+.psyneulink-left-menu ul, .psyneulink-right-menu ul {
+  margin-bottom: rem(40px);
+
+  @include sphinx-medium-size {
+    margin: rem(20px) rem(10px) rem(30px) 0;
+  }
+}
+
 .psyneulink-left-menu-search {
   ::-webkit-input-placeholder {
     color: $not_quite_black;

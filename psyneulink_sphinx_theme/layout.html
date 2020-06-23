@@ -135,12 +135,6 @@
 
             {% endblock %}
           </div>
-          <div class="psyneulink-dev-mode-toggle">
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label>
-          </div>
           {% block menu %}
             {#
               The singlehtml builder doesn't handle this toctree call when the
@@ -159,10 +153,11 @@
               <div class="local-toc">{{ toc }}</div>
             {% endif %}
           {% endblock %}
+          <div class="psyneulink-dev-mode-toggle">
+          </div>
         </div>
       </div>
     </nav>
-
     <div class="psyneulink-container">
       <div class="psyneulink-page-level-bar" id="psyneulink-page-level-bar">
         <div class="psyneulink-breadcrumbs-wrapper">

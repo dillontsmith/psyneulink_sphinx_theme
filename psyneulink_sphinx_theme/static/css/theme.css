@@ -11236,12 +11236,12 @@ input:checked + .slider:before {
   color: #6c6c6d;
 }
 
-.psyneulink-left-menu ul, .psyneulink-right-menu ul {
+.psyneulink-left-menu ul{
   margin-bottom: 2.5rem;
 
 }
 @media screen and (min-width: 1101px) {
-  .psyneulink-left-menu ul, .psyneulink-right-menu ul {
+  .psyneulink-left-menu ul{
     margin: 1.25rem 0.625rem 1.875rem 0;
   }
 }

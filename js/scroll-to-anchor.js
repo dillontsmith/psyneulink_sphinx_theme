@@ -42,18 +42,16 @@ window.scrollToAnchor = {
        */
       scrollIfAnchor: function(href, pushToHistory) {
         var match, anchorOffset;
-
         if(!this.ANCHOR_REGEX.test(href)) {
           return false;
         }
 
         match = document.getElementById(href.slice(1));
         if(match) {
-          if ($(match.querySelector('.anchorjs-link')).hasClass('dev-mode-link')){
+          if ($(match).hasClass('dev-mode-link')){
             $(document.querySelector('.switch-ctrl input')).prop('checked', true).trigger('change')
           };
-          var anchorOffset = $(match).offset().top - this.getFixedOffset();
-          $('html, body').scrollTop(anchorOffset);
+          $('html, body').scrollTop($(match).offset().top);
 
           // Add the state to history as-per normal anchor links
           if(HISTORY_SUPPORT && pushToHistory) {

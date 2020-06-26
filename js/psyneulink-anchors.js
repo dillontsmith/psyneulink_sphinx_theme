@@ -1,4 +1,8 @@
 window.psyneulinkAnchors = {
+  offsetHeightPx: function() {
+    return utilities.headersHeight() + utilities.OFFSET_HEIGHT_PADDING;
+  },
+
   bind: function() {
     // Replace Sphinx-generated anchors with anchorjs ones
     $(".headerlink").text("");

@@ -1,5 +1,5 @@
 window.utilities = {
-  OFFSET_HEIGHT_PADDING: 20,
+  OFFSET_HEIGHT_PADDING: 10,
 
   scrollTop: function() {
     var supportPageOffset = window.pageXOffset !== undefined;

@@ -112,7 +112,6 @@ window.sideMenus = {
 
   handleNavBar: function() {
     var mainHeaderHeight = document.getElementById('header-holder').offsetHeight;
-
     // If we are scrolled past the main navigation header fix the sub menu bar to top of page
     if (utilities.scrollTop() >= mainHeaderHeight) {
       document.getElementById("psyneulink-left-menu").classList.add("make-fixed");
